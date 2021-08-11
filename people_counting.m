@@ -2,9 +2,12 @@ clear all;
 close all;
 
 %%% data acquisition
-dataDir=['D:\matlab_workspace\people_counting\iwr6843_08_03_test_data\'];
+dataDir = 'D:\matlab_workspace\people_count\iwr6843_08_03_test_data\';
 
-filename=[dataDir,'adc_data_0.bin'];
+filename = [dataDir,'adc_data_0.bin'];
+cfgFileName = 'D:\matlab_workspace\people_count\ODS_6m_default.cfg';
+
+radarCfg = readRadarCfg(cfgFileName);
 
 % rawdata = readDCA1000_6843(filename); %gpuArray
 load rawdata.mat
