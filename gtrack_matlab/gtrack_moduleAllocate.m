@@ -25,11 +25,11 @@ for n = 1:num
                             allocnum = allocnum + 1;
                             allocSNR = allocSNR +  points(k).snr;
                             %add mCenter to mSum
-                            mSum_vector.azimuth = mSum_vector.azimuth + mCenter.vector.azimuth;
-                            mSum_vector.doppler = mSum_vector.doppler + mCenter.vector.doppler;
-                            mSum_vector.elevation = mSum_vector.elevation + mCenter.vector.elevation;
-                            mSum_vector.range = mSum_vector.range + mCenter.vector.range;
-                            mSum_vector.snr = mSum_vector.snr + mCenter.vector.snr;
+                            mSum_vector.azimuth = mSum_vector.azimuth + mCurrent.vector.azimuth;
+                            mSum_vector.doppler = mSum_vector.doppler + mCurrent.vector.doppler;
+                            mSum_vector.elevation = mSum_vector.elevation + mCurrent.vector.elevation;
+                            mSum_vector.range = mSum_vector.range + mCurrent.vector.range;
+                            mSum_vector.snr = mSum_vector.snr + mCurrent.vector.snr;
                             
                             mCenter.vector.azimuth = mSum_vector.azimuth/allocnum;
                             mCenter.vector.doppler = mSum_vector.doppler/allocnum;

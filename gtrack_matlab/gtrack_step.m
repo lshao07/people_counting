@@ -19,7 +19,7 @@ function [tNum, targetDescr] = gtrack_step(var,mNum, targetDescr, targetIndex,tN
             %/* If boundaries exists, set to outside, and overwrite if inside the boundary */
             trackerProcObj.gtrackHandle.bestIndex(n) = 254;    %GTRACK_ID_POINT_BEHIND_THE_WALL
             
-            pos = gtrack_sph2cart(points(n));
+            pos = gtrack_spherical2cartesian(points(n));
             
             for numBoxes = 1:trackerProcObj.gtrackHandle.params.sceneryParams.numBoundaryBoxes
                 flag = gtrack_isPointInsideBox(pos, trackerProcObj.gtrackHandle.params.sceneryParams.boundaryBox);

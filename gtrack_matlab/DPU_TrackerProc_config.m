@@ -34,12 +34,13 @@ function  handle = DPU_TrackerProc_config()
     pStaticCfg.staticCfg.gtrackModuleConfig.maxAcceleration = radarCfg.maxAcceleration;%
     
     defaultSceneryParams.numBoundaryBoxes = 1;
-    defaultSceneryParams.boundaryBox.x1 = radarCfg.boundaryBox(1);
-    defaultSceneryParams.boundaryBox.x2 = radarCfg.boundaryBox(2);
-    defaultSceneryParams.boundaryBox.y1 = radarCfg.boundaryBox(3);
-    defaultSceneryParams.boundaryBox.y2 = radarCfg.boundaryBox(4);
-    defaultSceneryParams.boundaryBox.z1 = radarCfg.boundaryBox(5);
-    defaultSceneryParams.boundaryBox.z2 = radarCfg.boundaryBox(6);
+%     defaultSceneryParams.boundaryBox.x1 = radarCfg.boundaryBox(1);
+%     defaultSceneryParams.boundaryBox.x2 = radarCfg.boundaryBox(2);
+%     defaultSceneryParams.boundaryBox.y1 = radarCfg.boundaryBox(3);
+%     defaultSceneryParams.boundaryBox.y2 = radarCfg.boundaryBox(4);
+%     defaultSceneryParams.boundaryBox.z1 = radarCfg.boundaryBox(5);
+%     defaultSceneryParams.boundaryBox.z2 = radarCfg.boundaryBox(6);
+    defaultSceneryParams.boundaryBox = radarCfg.boundaryBox;
     defaultSceneryParams.numStaticBoxes = 1;
     defaultSceneryParams.staticBox = radarCfg.staticBoundaryBox;
 
