@@ -34,12 +34,6 @@ function  handle = DPU_TrackerProc_config()
     pStaticCfg.staticCfg.gtrackModuleConfig.maxAcceleration = radarCfg.maxAcceleration;%
     
     defaultSceneryParams.numBoundaryBoxes = 1;
-%     defaultSceneryParams.boundaryBox.x1 = radarCfg.boundaryBox(1);
-%     defaultSceneryParams.boundaryBox.x2 = radarCfg.boundaryBox(2);
-%     defaultSceneryParams.boundaryBox.y1 = radarCfg.boundaryBox(3);
-%     defaultSceneryParams.boundaryBox.y2 = radarCfg.boundaryBox(4);
-%     defaultSceneryParams.boundaryBox.z1 = radarCfg.boundaryBox(5);
-%     defaultSceneryParams.boundaryBox.z2 = radarCfg.boundaryBox(6);
     defaultSceneryParams.boundaryBox = radarCfg.boundaryBox;
     defaultSceneryParams.numStaticBoxes = 1;
     defaultSceneryParams.staticBox = radarCfg.staticBoundaryBox;
@@ -60,8 +54,8 @@ function  handle = DPU_TrackerProc_config()
     defaultAllocationParams.snrThreObscured = radarCfg.allocationParam(2);
     defaultAllocationParams.velocityThre = radarCfg.allocationParam(3);
     
-%     defaultAllocationParams.pointsThre = radarCfg.allocationParam(4);
-    defaultAllocationParams.pointsThre = 10;
+    defaultAllocationParams.pointsThre = radarCfg.allocationParam(4);
+%     defaultAllocationParams.pointsThre = 10;
     
     defaultAllocationParams.maxDistanceThre = radarCfg.allocationParam(5);
     defaultAllocationParams.maxVelThre = radarCfg.allocationParam(6);
@@ -99,9 +93,7 @@ function  handle = DPU_TrackerProc_config()
     pStaticCfg.staticCfg.gtrackModuleConfig.maxNumTracks = radarCfg.trackingCfg(4);
     
     trackerProcObj.pointCloudSize =  pStaticCfg.staticCfg.gtrackModuleConfig.maxNumPoints;
-%     trackerProcObj.pDpuCfg = pConfigIn;
     
-
     trackerProcObj.targetDescrHandle.currentDescr = 0;
     
     targetList = [];
